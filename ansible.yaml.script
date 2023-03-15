@@ -1,0 +1,18 @@
+---
+ - name: play for creating an aws ec2 instance
+   hosts: localhost
+   connection: local
+   tasks:
+   - name: creation of ec2 instance using ec2 moudle
+     ec2:
+      instance_type: t2.micro
+      image: ami-09ba48996007c8b50
+      region: ap-south-1
+      key_name: DevOps
+      count: 2
+      aws_access_key: AKIA6LOSJH6RZKR2BC24
+      aws_secret_key: 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
+
+
+[localhost]
+localhost ansible_connection=local ansible_python_interpreter=python3

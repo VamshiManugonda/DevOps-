@@ -1,0 +1,21 @@
+---
+ - name: play for ec2
+   hosts: localhost
+   connection: local
+   tasks:
+   - name: creating ec2 using module
+     ec2:
+      instance_type: t2.micro
+      image: ami-01a4f99c4ac11b03c
+      region: ap-south-1
+      key_name: ROLLSROYALS
+      aws_access_key: AKIAZ7KKSKAOFQWNZOXZ
+      aws_secret_key: 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
+
+
+#in hosts to access python
+[localhost]
+localhost ansible_connection=local ansible_python_interpreter=python3
+
+#to install boto
+pip3 install boto boto3 --user

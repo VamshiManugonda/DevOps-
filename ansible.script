@@ -1,0 +1,17 @@
+---
+ - name: play for ec2
+   hosts: localhost
+   connection: local
+   tasks:
+   - name: creating ec2 using module
+     ec2:
+      instance_type: t2.micro
+      image: ami-01a4f99c4ac11b03c
+      region: ap-south-1
+      key_name: ROLLSROYALS
+      aws_acces_key:AKIAZ7KKSKAONEYFDHVL
+      aws_secret_key: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
+
+
+      AKIAZ7KKSKAODA6ITD5N
+      oHIBC7gCVUyhUx7l8Ok6SSHC7Lqhf4iw2QmXatea

@@ -1,0 +1,20 @@
+provider "aws" {
+  region = "ap-south-1"
+  access_key = "AKIAZ7KKSKAODA6ITD5N"
+  secret_key = "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"
+}
+
+resource "aws_instance" "**instance name***"{
+  ami = "ami-09ba48996007c8b50"
+  instance_type = "t2.micro"
+}
+resource "aws_s3_bucket" "********" {
+  bucket = "******-tf-test-bucket"
+  acl = "private"
+
+  tags = {
+    Name = "***********"
+    Environment = "****"
+  }
+}
+
