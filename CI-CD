@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tomcat-users>
+<role rolename="manager-gui"/>
+  <user username="devops" password="devops" roles="manager-gui"/>
+  <role rolename="manager-script"/>
+  <user username="aws" password="aws" roles="manager-script"/>
+</tomcat-users>
+
+<Context privileged="true" antiResourceLocking="false" docBase="${catalina.home}/webapps/manager">
+<Valve className="org.apache.catalina.valves.RemoteAddrValve" allow="^.*$" />
+</Context>
